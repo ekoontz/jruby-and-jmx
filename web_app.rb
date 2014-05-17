@@ -11,9 +11,6 @@ class HitBean < RubyDynamicMBean
   def hit!
     @hits += 1
   end
-end
-
-class HitBean
   
   r_attribute :hits, :int, 'Current hit count'
 
