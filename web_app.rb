@@ -11,14 +11,14 @@ class HitBean < RubyDynamicMBean
   def hit!
     @hits += 1
   end
-  
-  r_attribute :hits, :int, 'Current hit count'
 
   operation 'Clear the hit count'
   returns :void
   def clear
     @hits = 0
   end
+  
+  r_attribute :hits, :int, 'Current hit count'
 
 end
 
