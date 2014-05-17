@@ -17,6 +17,14 @@ class HitBean < RubyDynamicMBean
   def clear
     @hits = 0
   end
+
+  operation 'Bump dat shit'
+  returns :void
+  def bump
+    @hits += 42
+  end
+
+
   
   r_attribute :hits, :int, 'Current hit count'
 
